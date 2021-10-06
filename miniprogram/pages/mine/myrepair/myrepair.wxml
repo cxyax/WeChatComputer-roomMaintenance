@@ -1,0 +1,53 @@
+<view class="header-box">
+  <!-- 
+<view>
+  <van-picker columns="{{ floorList }}" bind:change="selectFloor" visible-item-count="3" />
+</view> -->
+  <view wx:if="{{applyData == ''}}">
+    <view class="warring_top">
+      <image src="/images/warringico.png" class="warringico"></image>
+      <view class="warring_text">
+        抱歉，您并未发布任何报修
+      </view>
+      <view class="goToSendText" bindtap="goToPubish">
+        前往去发布
+      </view>
+    </view>
+
+    <button class="warring_btn" bindtap="escUp">确定</button>
+
+  </view>
+  <block wx:for="{{applyData}}" wx:key="applyData">
+    <view class="card-item">
+      <view class="item-content border-bottom">
+        <view class="left-box">
+          <image src="{{item.levelIcon}}" mode="aspectFill"></image>
+        </view>
+        <view class="right-box">
+          <view class="floor">{{item.floor}}机房{{item.dorm}}号机器
+            <view class="level-tag" style="background-color: {{ item.level === '普通维修' ? '#07c160' : '#ee0a24'}}">
+              {{item.level}}</view>
+          </view>
+          <text class="date">{{item.createTime}}</text>
+          <text class="desc">{{item.desc}}</text>
+          <van-tag color="{{item.status === '未处理' ? '#ff976a' : '#07c160'}}">{{item.status}}</van-tag>
+
+
+          <view class="item-footer">
+            <text data-id="{{item._id}}" bindtap="deleteMeSend"
+              style="border: 1px solid red;padding:5rpx 10rpx 5rpx 10rpx;border-radius: 15rpx;color:red;">取消工单</text>
+            <text wx:if="{{item.status == '未处理'}}" data-id="{{item._id}}" bindtap="updateApplyStatus"
+              style="color: rgb(31, 134, 0);border: 1px solid rgb(31, 134, 0);padding:5rpx 10rpx 5rpx 10rpx;border-radius: 15rpx;">已经好了</text>
+            <text data-id="{{item._id}}" bindtap="navDetail"
+              style="border: 1px solid #1989FA;padding:5rpx 10rpx 5rpx 10rpx;border-radius: 15rpx;">查看详情</text>
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+
+  </block>
+
+
+</view>

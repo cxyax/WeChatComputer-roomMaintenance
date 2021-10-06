@@ -1,0 +1,33 @@
+<!-- <view class="header-box">
+	<van-picker columns="{{ floorList }}" bind:change="selectFloor" visible-item-count="3" />
+
+</view> -->
+<view class="header-tab">
+	<ye-tab tab-list="{{tabList}}" font-size="32rpx" lrPadding="100rpx" bind:select="selectStatus"></ye-tab>
+</view>
+<block wx:for="{{applyData}}" wx:key="applyData">
+	<view class="card-item">
+		<view class="item-content border-bottom">
+			<view class="left-box">
+				<image src="{{item.levelIcon}}" mode="aspectFill"></image>
+			</view>
+			<view class="right-box">
+				<view class="floor">{{item.floor}}机房{{item.dorm}}号机器
+					<view class="level-tag" style="background-color: {{ item.level === '普通维修' ? '#07c160' : '#ee0a24'}}">
+						{{item.level}}</view>
+				</view>
+				<text class="date">{{item.createTime}}</text>
+				<text class="desc">{{item.desc}}</text>
+				<van-tag color="{{item.status === '未处理' ? '#ff976a' : '#07c160'}}">{{item.status}}</van-tag>
+
+			</view>
+		</view>
+		<view class="item-footer">
+			<text data-id="{{item._id}}" bindtap="deleteApplyData"style="border: 1px solid red;padding:5rpx 10rpx 5rpx 10rpx;border-radius: 15rpx;color:red;">删除工单</text>
+			<text class="confirm-text-btn" data-id="{{item._id}}" data-index="{{index}}" wx:if="{{item.status === '未处理'}}"bindtap="updateApplyStatus" style="color: rgb(31, 134, 0);border: 1px solid rgb(31, 134, 0);padding:5rpx 10rpx 5rpx 10rpx;border-radius: 15rpx;">确认处理</text>
+			<text data-id="{{item._id}}" bindtap="navDetail"style="border: 1px solid #1989FA;padding:5rpx 10rpx 5rpx 10rpx;border-radius: 15rpx;">查看详情</text>
+			<!-- <text class="delete-text-btn" data-id="{{item._id}}" wx:if="{{item.status === '已处理'}}" bindtap="deleteApplyData">删除</text> -->
+		</view>
+
+	</view>
+</block>

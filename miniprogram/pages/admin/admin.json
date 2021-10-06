@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-picker": "@vant/weapp/picker/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "ye-tab": "../../components/tab/tab"
+  },
+  "navigationBarTitleText": "申报管理",
+  "enablePullDownRefresh": true
+}

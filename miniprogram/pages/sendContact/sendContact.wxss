@@ -1,0 +1,106 @@
+page{
+	background-color: #F0F0F0;
+}
+#maxView{
+	background-color: #fff;
+	border-radius: 20rpx;
+	width: 95%;
+	/* height: 400rpx; */
+	margin:30rpx auto;
+	padding: 30rpx;
+}
+.nameline,.phoneline{
+	overflow: hidden;
+	line-height: 50px;
+	border-bottom:1px solid rgba(182, 182, 182, 0.596) ;
+}
+.phoneline{
+	margin-top: 10rpx;
+	margin-bottom: 20rpx;
+}
+.dataline{
+	margin-top: 10rpx;
+	margin-bottom: 20rpx;
+}
+/* 多行文本域 */
+.shopdata{
+	border: 1px solid rgb(182, 181, 181);
+	width: 100%;
+	padding: 10rpx;
+}
+/* 输入框左侧提示 */
+.label{
+	width: 30%;
+	float: left;
+	color: rgb(100, 100, 100);
+	font-size: 30rpx;
+}
+.input{
+	width: 65%;
+	float: right;
+	
+}
+/*输入框*/
+.name ,.phone{
+	height: 50px;
+}
+/* 提示信息 */
+.msg{
+	color: rgb(126, 125, 125);
+}
+/* 提交按钮 */
+.button{
+	width: 100%;
+	color: #fff;
+	background-color: #679fd2;
+	text-align: center;
+	height: 90rpx;
+	line-height: 90rpx;
+	border-radius: 20rpx;
+	margin-top: 70rpx;
+	margin-bottom:50rpx;
+	border:none;
+}
+.button:active{
+	width: 100%;
+	color: #fff;
+	background-color: #408dd2;
+	text-align: center;
+	height: 90rpx;
+	line-height: 90rpx;
+	border-radius: 20rpx;
+	margin-top: 70rpx;
+	margin-bottom:50rpx;
+	border:none;
+}
+
+.conts{
+  width: 750rpx;
+  height: auto;
+  border: 1rpx soldi red;
+  margin-top: 30rpx;
+}
+.areas{
+  height:152rpx;
+  font-size: 30rpx;
+  text-indent: 28rpx;
+  border: 1rpx solid gainsboro;
+  padding-top: 30rpx;
+  margin: 0 auto;
+  overflow: hidden;   
+  position: relative; 
+}
+.currentWordNumber{
+  font-size: 28rpx;
+  color: gray;
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+.hint{
+   font-size: 28rpx;
+   position: absolute;
+   bottom: 10rpx;
+   left: 10rpx;
+   color: #FF6600;
+}

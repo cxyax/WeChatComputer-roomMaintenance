@@ -1,0 +1,89 @@
+.notice-container {
+  margin-bottom: 20rpx;
+}
+input, textarea {
+  /* border: 1px solid rgb(196, 196, 196); */
+  padding: 10rpx;
+}
+.line{
+  margin: 10px auto;
+  width: 99%;
+  height: 3rpx;
+  background-color: rgb(192, 192, 192);
+}
+.declare-input{
+  width: 90%;
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgb(180, 180, 180);
+  border-radius: 15rpx;
+ 
+}
+.userLogo{
+  text-align: center;
+  width: 150rpx;
+  height: 150rpx;
+  margin:-50px auto;
+  border: 3px solid orange;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+}
+.decare-input-item{
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+.itemtext{
+  font-weight: bold;
+  font-size: 28rpx;
+  width: 36%;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+}
+.iteminput{
+  width: 60%;
+  float: right;
+  text-align: right;
+}
+.itemtext2{
+  font-size: 28rpx;
+  font-weight: bold;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.picker-input{
+  width: 30%;
+  float: left;
+}
+.compNumber{
+  width: 30%;
+  float: left;
+  text-align: right;
+}
+.text-dorm{
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0rpx 10rpx 0rpx;
+  float: left;
+  font-weight: 300;
+  font-size: 28rpx;
+}
+.textarea{
+  width: 100%;
+  border: 2rpx solid rgb(196, 196, 196);
+}
+.apply-btn{
+  margin: 20rpx 0rpx 20rpx;
+}
+.apply-btn button{
+  border-radius: 40rpx;
+  background:linear-gradient(to right,rgb(1, 156, 218),rgb(3, 94, 197));
+  width: 90%;
+}
+
+
+
+
+

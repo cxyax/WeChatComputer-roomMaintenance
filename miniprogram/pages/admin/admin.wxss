@@ -1,0 +1,12 @@
+@import '../index/card.wxss';
+
+.header-box {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.header-tab {
+  padding: 10rpx 0;
+  background-color: var(--color-white);
+}

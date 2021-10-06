@@ -1,0 +1,76 @@
+<view id="maxView">
+	<image src="/images/index_topimage.png" class="topimage"></image>
+	<view class="addOrdersBtn" bindtap="toPublish">
+		<image src="/images/report.png" class="addlogo"></image>
+		我要报修
+	</view>
+
+	<view class="orderData">
+		<view class="center">
+			<view class="mySendOrder" bindtap="toMyRepair">
+				<image src="/images/mysendorders.png"></image>
+				<span>我的报修</span>
+			</view>
+			<view class="myOrderOver" bindtap="toOverList">
+				<image src="/images/ordersover.png"></image>
+				<span>已完成的</span>
+			</view>
+			<view class="adminShowOrder" bindtap="toAdmin">
+				<image src="/images/adminshowordeer.png"></image>
+				<span>待我审核</span>
+			</view>
+		</view>
+	</view>
+
+	<view class="orderslist">
+		<view class="orderlist_title">最近工单</view>
+		<view style="background-color: #fff;">
+			<block wx:for="{{applyData}}" wx:key="applyData">
+				<view class="card-item">
+					<view class="item-content border-bottom">
+						<view class="left-box">
+							<image src="{{item.levelIcon}}" mode="aspectFill"></image>
+						</view>
+						<view class="right-box">
+							<view class="floor">{{item.floor}}机房{{item.dorm}}号机器
+								<view class="level-tag" style="background-color: {{ item.level === '普通维修' ? '#07c160' : '#ee0a24'}}">{{item.level}}</view>
+							</view>
+							
+							<text class="date">{{item.createTime}}</text>
+							
+							<text class="desc">{{item.desc}}</text>
+							<!-- <van-tag class="flag" color="{{item.status === '未处理' ? '#ff976a' : '#07c160'}}">{{item.status}}</van-tag> -->
+							
+
+							<view class="item-footer">
+								<!-- <text data-id="{{item._id}}" bindtap="deleteMeSend"  style="border: 1px solid red;padding:5rpx 10rpx 5rpx 10rpx;border-radius: 15rpx;color:red;">取消工单</text> -->
+								<!-- <image src="/images/deleteicon.png" style="width: 20px; height: 20px;" data-id="{{item._id}}" bindtap="deleteMeSend" ></image> -->
+								<text data-id="{{item._id}}" bindtap="navDetail" style="border: 1px solid #1989FA;padding:5rpx 10rpx 5rpx 10rpx;border-radius: 15rpx;">查看详情</text>
+							</view>
+						</view>
+					</view>
+
+					<!-- <view class="level-tag" style="background-color: {{ item.level === '普通维修' ? '#07c160' : '#ee0a24'}}">
+						{{item.level}}</view> -->
+				</view>
+
+			</block>
+		</view>
+	</view>
+
+ <!-- 分享按钮 -->
+ <view class="fenxiang" >
+  <button class="button-row" id="ContactusBtn" bindtap="ContactusBtn" type="primary" class="contactusBtn">
+    <image src="../../images/ContactusBtn.png" class="icon-50" style="margin:15rpx -20rpx"></image>
+  </button>
+</view>
+
+	<view>
+		<view class="panel-center item-center ma-t30" style='padding:30rpx;padding-top:0 '>
+			<view class='fg1'></view>
+			<view class='fg2'>我是有底线的哦</view>
+			<view class='fg1'></view>
+		</view>
+	</view>
+
+</view>

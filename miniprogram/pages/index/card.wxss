@@ -1,0 +1,97 @@
+.card-item {
+  background-color: var(--color-white);
+  margin: 20rpx;
+  border-radius: 10rpx;
+  position: relative;
+}
+
+.card-item .item-content {
+  display: flex;
+  padding: 20rpx;
+  position: relative;
+}
+
+.left-box>image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  border: 2px solid rgb(209, 209, 209);
+}
+
+.right-box {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.right-box .floor {
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+.right-box .desc {
+  font-size: 28rpx;
+  margin: 5rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.right-box .date {
+  font-size: 25rpx;
+  color: var(--color-text-second);
+  margin-top: 5rpx;
+}
+
+.card-item .item-footer {
+  font-size: 28rpx;
+  padding: 10rpx;
+  text-align: right;
+  color: var(--color-btn-info);
+}
+
+.item-footer>text {
+  margin-left: 20rpx;
+}
+
+.confirm-text-btn {
+  color: var(--color-btn-primary);
+}
+
+.delete-text-btn {
+  color: var(--color-btn-danger);
+}
+
+/* .level-tag {
+  font-size: 20rpx;
+  color: var(--color-white);
+  padding: 5rpx 10rpx;
+  border-radius: 0 999px 999px 0;
+  display: inline-block;
+  background-color: var(--color-btn-danger);
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+} */
+.level-tag {
+  font-size: 23rpx;
+  color: var(--color-white);
+  padding: 5rpx 10rpx;
+  /* border-radius: 0 999px 999px 0; */
+  display: inline-block;
+  background-color: var(--color-btn-danger);
+  width: 60px;
+  text-align: center;
+  /* position: absolute;
+  top: 20rpx;
+  left: 0; */
+}
+
+.flag{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

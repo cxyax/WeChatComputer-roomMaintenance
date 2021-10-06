@@ -1,0 +1,39 @@
+<block wx:for="{{applyData}}" wx:key="applyData">
+				<view class="card-item">
+					<view class="item-content border-bottom">
+						<view class="left-box">
+							<image src="{{item.levelIcon}}" mode="aspectFill"></image>
+						</view>
+						<view class="right-box">
+							<view class="floor">{{item.floor}}机房{{item.dorm}}号机器
+								<view class="level-tag" style="background-color: {{ item.level === '普通维修' ? '#07c160' : '#ee0a24'}}">{{item.level}}</view>
+								<van-tag class="flag" color="{{item.status === '未处理' ? '#ff976a' : '#07c160'}}">{{item.status}}</van-tag>
+							</view>
+							
+							<text class="date">{{item.createTime}}</text>
+							
+							<text class="desc">{{item.desc}}</text>
+							
+							
+
+							<view class="item-footer">
+								<!-- <text data-id="{{item._id}}" bindtap="deleteMeSend"  style="border: 1px solid red;padding:5rpx 10rpx 5rpx 10rpx;border-radius: 15rpx;color:red;">删除工单</text> -->
+								<!-- <image src="/images/deleteicon.png" style="width: 20px; height: 20px;" data-id="{{item._id}}" bindtap="deleteMeSend" ></image> -->
+								<text data-id="{{item._id}}" bindtap="navDetail" style="border: 1px solid #1989FA;padding:5rpx 10rpx 5rpx 10rpx;border-radius: 15rpx;">查看详情</text>
+							</view>
+						</view>
+					</view>
+
+					<!-- <view class="level-tag" style="background-color: {{ item.level === '普通维修' ? '#07c160' : '#ee0a24'}}">
+						{{item.level}}</view> -->
+				</view>
+
+			</block>
+
+<view>
+	<view class="panel-center item-center ma-t30" style='padding:30rpx;padding-top:0 '>
+		<view class='fg1'></view>
+		<view class='fg2'>我是有底线的哦</view>
+		<view class='fg1'></view>
+	</view>
+</view>

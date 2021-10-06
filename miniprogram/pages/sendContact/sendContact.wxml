@@ -1,0 +1,32 @@
+<view id="maxView">
+	<form action="">
+		<view class="nameline">
+			<label class="name_label label">怎么称呼您</label>
+			<text class="bitian" style="color:red">*</text>
+			<input type="text" class="name input" bindinput="shopname" placeholder="请告诉我们怎么称呼您"/>
+		</view>
+		<view class="phoneline">
+			<label class="phone_label label">联系手机号码</label>
+			<text class="bitian" style="color:red">*</text>
+			<input type="phone" class="phone input" maxlength="11" bindinput="shopphone" placeholder="请填写手机号码"/>
+		</view>
+		<view class="dataline">
+			<label class="data_label label">意见/建议
+				<text class="bitian" style="color:red">*</text>
+			</label>
+			<textarea placeholder='您想告诉我们什么？' class="shopdata" cols="30" rows="10" maxlength="{{max}}" bindinput='inputs'>
+				<text class="currentWordNumber">{{currentWordNumber}}/{{max}}</text>
+        <!-- <text class="hint">{{texts}}{{num}}{{textss}}</text> -->
+			</textarea>
+		</view>
+		
+		<text class="msg">请认真填写您的联系信息，方便我们工作人员与您联系</text>
+
+		<button class="button" bindtap ="sendEmail" >提交申请</button>
+		<!-- disabled="{{usebutton}}" -->
+		
+		<view bindtap="makePhone" style="text-align: center;">
+			<text style="font-size: 15px;">👉太麻烦了，我要电话联系！👈</text>
+		</view>
+	</form>
+</view>

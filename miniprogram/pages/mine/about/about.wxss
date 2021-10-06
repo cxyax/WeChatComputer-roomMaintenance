@@ -1,0 +1,42 @@
+.header{
+  width: 100%;
+}
+.font-text{
+  font-weight: bold;
+  text-align: center;
+}
+.logo_view{
+  text-align: center;
+  margin: 20rpx;
+  margin-top: 50rpx;
+}
+.logo{
+  width: 150rpx;
+  height: 150rpx;
+}
+.center{
+  width: 90%;
+  font-size: 27rpx;
+  margin: 30rpx auto;
+  padding: 20rpx;
+  background-color: #fff;
+}
+.team > text{
+  padding-left: 50rpx;
+}
+.team_title{
+  font-weight: bold;
+}
+.team view{
+  margin: 10rpx;
+}
+.bottom{
+  width: 90%;
+  margin: 0px auto;
+  text-align: center;
+}
+.ma{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 100rpx;
+}

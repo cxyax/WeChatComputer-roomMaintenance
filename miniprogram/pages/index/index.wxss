@@ -1,0 +1,231 @@
+.topimage{
+  width: 100%;
+  height: 150px;
+}
+.addlogo{
+ width: 40rpx;
+ height: 40rpx;
+ vertical-align: middle;
+}
+.addOrdersBtn{
+  width: 60%;
+  height: 45px;
+  border-radius: 20px;
+  background-color: #fff;
+  margin: -30px auto;
+  box-shadow: 0px 5px 10px rgb(194, 194, 194);
+  position: relative;
+  text-align: center;
+  line-height: 45px;
+  z-index: 99;
+  font-size: 16px;
+  font-weight: bold;
+}
+.addOrdersBtn:active{
+  width: 60%;
+  height: 45px;
+  border-radius: 20px;
+  background-color: rgb(238, 238, 238);
+  /* color: #fff; */
+  margin: -30px auto;
+  box-shadow: 0px 5px 10px rgb(194, 194, 194);
+  position: relative;
+  text-align: center;
+  line-height: 45px;
+  z-index: 99;
+  font-size: 16px;
+  font-weight: bold;
+}
+.orderData{
+  background-color: #fff;
+  width: 100%;
+  height: 270rpx;
+  border-radius: 10px;
+  margin: 0px auto;
+  padding-top: 45px;
+  overflow: hidden;
+}
+.center{
+  margin: 0px auto;
+  /* width: 92%; */
+  overflow: hidden;
+}
+.mySendOrder{
+  width: 30%;
+  height: 70px;
+  float: left;
+  text-align: center;
+  background-color:#37ADFF;
+  border-radius: 10px;
+  margin: 5px;
+  margin-left: 10px;
+  line-height: 70px;
+  color: #fff;
+  font-weight: bold;
+}
+.mySendOrder:active{
+  width: 30%;
+  height: 70px;
+  float: left;
+  text-align: center;
+  background-color:#3095dd;
+  border-radius: 10px;
+  margin: 5px;
+  margin-left: 10px;
+  line-height: 70px;
+  color: #fff;
+  font-weight: bold;
+}
+.mySendOrder image{
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.myOrderOver{
+  width: 30%;
+  height: 70px;
+  float: left;
+  text-align: center;
+  background-color:#FDC860;
+  border-radius: 10px;
+  margin: 5px;
+  line-height: 70px;
+  color: #fff;
+  font-weight: bold;
+}
+.myOrderOver:active{
+  width: 30%;
+  height: 70px;
+  float: left;
+  text-align: center;
+  background-color:#dbae53;
+  border-radius: 10px;
+  margin: 5px;
+  line-height: 70px;
+  color: #fff;
+  font-weight: bold;
+}
+.myOrderOver image{
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
+
+.adminShowOrder{
+  width: 30%;
+  height: 70px;
+  float: left;
+  text-align: center;
+  background-color:#A1D676;
+  border-radius: 10px;
+  margin: 5px;
+  line-height: 70px;
+  color: #fff;
+  font-weight: bold;
+}
+.adminShowOrder:active{
+  width: 30%;
+  height: 70px;
+  float: left;
+  text-align: center;
+  background-color:#94c56c;
+  border-radius: 10px;
+  margin: 5px;
+  line-height: 70px;
+  color: #fff;
+  font-weight: bold;
+}
+.adminShowOrder image{
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.orderlist_title{
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+@import './card.wxss';
+
+.header-box {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.image_logo{
+  vertical-align:middle;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-container {
+  padding: 20rpx;
+  background-color: var(--color-white);
+  color: var(--color-btn-info);
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+.nav-container text{
+  margin-left: 2px;
+  vertical-align:middle;
+}
+
+/* 底部 我也是有底线的 */
+.fg1{
+  width: 80rpx;
+  border-bottom: 1px solid #aaaaaa;
+  vertical-align: middle;
+}
+.fg2{
+  margin: 0 30rpx;
+  font-size: 26rpx;
+  color: #888;
+  vertical-align: middle;
+}
+.panel-center{
+  display: flex;
+  justify-content: center;
+}
+.panel-center{
+  display: flex;
+  justify-content: center;
+}
+.ma-t30{
+  margin-top: 30rpx
+}
+
+/*分享代码*/
+.fenxiang{
+  width: 80rpx;
+  position: fixed;
+  right: 10rpx;
+  bottom: 20px;
+}
+.fenxiang image{
+  width: 30px;
+  height: 30px;
+}
+.fenxiang>button[class="contactusBtn"]{
+  background: #0d91dd; 
+  color: #fff; 
+  height:80rpx; 
+  border-radius:50%;
+  margin-top: 5px;
+}
+/* .fenxiang>button[class="fenxiangBtn"]{
+  background: #08cc33; 
+  color: #fff; 
+  height:80rpx; 
+  border-radius:50%;
+  margin-top: 5px;
+} */
+
+.header-tab {
+  padding: 10rpx 0;
+  background-color: var(--color-white);
+}

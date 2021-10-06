@@ -1,0 +1,81 @@
+@import './card.wxss';
+
+.header-box {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.image_logo{
+  vertical-align:middle;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-container {
+  padding: 20rpx;
+  background-color: var(--color-white);
+  color: var(--color-btn-info);
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+.nav-container text{
+  margin-left: 2px;
+  vertical-align:middle;
+}
+/*分享代码*/
+.fenxiang{
+  width: 80rpx;
+  position: fixed;
+  right: 10rpx;
+  bottom: 20px;
+}
+.fenxiang image{
+  width: 30px;
+  height: 30px;
+}
+.fenxiang>button[class="contactusBtn"]{
+  background: #0d91dd; 
+  color: #fff; 
+  height:80rpx; 
+  border-radius:50%;
+  margin-top: 5px;
+}
+.fenxiang>button[class="fenxiangBtn"]{
+  background: #08cc33; 
+  color: #fff; 
+  height:80rpx; 
+  border-radius:50%;
+  margin-top: 5px;
+}
+
+.header-tab {
+  padding: 10rpx 0;
+  background-color: var(--color-white);
+}
+
+
+/* 底部 我也是有底线的 */
+.fg1{
+  width: 80rpx;
+  border-bottom: 1px solid #aaaaaa;
+  vertical-align: middle;
+}
+.fg2{
+  margin: 0 30rpx;
+  font-size: 26rpx;
+  color: #888;
+  vertical-align: middle;
+}
+.panel-center{
+  display: flex;
+  justify-content: center;
+}
+.panel-center{
+  display: flex;
+  justify-content: center;
+}
+.ma-t30{
+  margin-top: 30rpx
+}

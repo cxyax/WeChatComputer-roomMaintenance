@@ -1,0 +1,28 @@
+<view class="header">
+    <view class="logo_view"> 
+      <image src="/images/logo.png" class="logo"/>
+    </view>
+    <view class="font-text">机房报修助手V2.7.1</view>
+</view>
+
+<view class="center">
+  机房报修助手是为了方便大家对机房进行故障实时上报的平台，致力于建立一个实时、精准、快速的维修上报体系，解决了同学们报修困难、修复慢等问题，使同学们可以快速实时的精准上报机器故障情况！
+</view>
+
+<view class="center team">
+  <view class="team_title">开发团队</view>
+  <view>开发者：程序员阿鑫</view>
+  <view bindtap="callApplyWechat" style="color: rgb(2, 108, 207);">微信:FreeRoot200716</view>
+  <view bindtap="makePhone"  style="color: rgb(2, 108, 207);">联系方式：187-5402-6672</view>
+  <view class="team_title">特别鸣谢</view>
+  <view>叶志远（网名）</view>
+</view>
+
+<view class="bottom">
+  <text>
+    程序员阿鑫博客
+    http://www.cxyax.com
+  </text>
+
+  <image src="/images/cxyax.png" class="ma"></image>
+</view>

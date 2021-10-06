@@ -1,0 +1,53 @@
+<!-- 通告栏 -->
+<view class="notice-container">
+	<van-notice-bar left-icon="https://img.yzcdn.cn/public_files/2017/8/10/6af5b7168eed548100d9041f07b7c616.png"
+		text="请同学们如实填写信息,方便维修人员对应进行维修。请同学们推广使用,谢谢大家。" speed="40" />
+</view>
+
+<!-- 申报项 -->
+<view class="declare-input">
+	<view class="userLogo">
+		<open-data type="userAvatarUrl"></open-data>
+	</view>
+	<view class="decare-input-item">
+		<text class="itemtext">申报人(必填)：</text>
+		<input type="text" class="iteminput" maxlength="8" placeholder="请输入姓名" bindinput="setName" value="{{realName}}"/>
+	</view>
+	<view class="line"></view>
+	<view class="decare-input-item">
+		<text class="itemtext2">故障机器(必填)：</text>
+		<picker bindchange="selectFloor" range="{{pickerList}}">
+			<view class="picker">
+				<input class="picker-input" placeholder="请选择机房" disabled="true"  value="{{floor}}"></input>
+			</view>
+		</picker>
+	<text class="text-dorm">机房</text>
+	<input class="compNumber" type="number" placeholder="输入机器号" maxlength="6"  bindinput="setDormNum" value="{{dorm}}"></input>
+	<text class="text-dorm">号机器</text>
+	</view>
+	<view class="line"></view>
+	<view class="decare-input-item">
+		<text class="itemtext">联系电话(必填)：</text>
+		<input class="iteminput" type="number" bindinput="setPhone" maxlength="11" placeholder="请输入手机号"  value="{{realPhone}}"></input>
+	</view>
+	<view class="line"></view>
+	<view class="decare-input-item">
+		<text class="itemtext2">申报描述(必填)：</text>
+		<textarea class="textarea" placeholder="请说明要维修的情况、出现状况，如何导致等.." placeholder-style="color:#ccc;font-size:14px;" type="string"
+			maxlength="50" bindinput="setDesc" value="{{desc}}"></textarea>
+	</view>
+	<van-radio-group value="{{ level }}" bind:change="selectLevel">
+		<van-cell-group border="{{false}}">
+			<van-cell title="普通维修" clickable data-level="普通维修" bind:click="clickLevel" border="{{false}}">
+				<van-radio slot="right-icon" name="普通维修" />
+			</van-cell>
+			<van-cell title="紧急维修" clickable data-level="紧急维修" bind:click="clickLevel" border="{{false}}">
+				<van-radio slot="right-icon" name="紧急维修" />
+			</van-cell>
+		</van-cell-group>
+	</van-radio-group>
+	<!-- 提交申报 -->
+	<view class="apply-btn">
+			<button type="primary" bindtap="inApplyData" data-id="{{data._id}}">确定修改</button>
+	</view>
+</view>

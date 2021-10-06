@@ -1,0 +1,95 @@
+<!-- 顶部栏 -->
+<view class="ns"> 个人中心</view>
+<!-- 头部部分 -->
+<view class="header">
+  <image class="bg_ware" src="https://ftp.bmp.ovh/imgs/2019/12/83388a096d28fab7.gif"></image>
+  <view class="header-top">
+    <view class="info">
+    <view class="touxiang" wx:if="{{login}}">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <image class="touxiang mine_img" src="/images/unlogin.png" wx:else></image>
+    <view class="name" wx:if="{{login}}" >
+      <open-data type="userNickName" default-text="昵称" class="usernameText" ></open-data>
+      <open-data type="userGender" lang="zh_CN" class="usergenderText"></open-data>
+      
+      <!-- <view class="UpLoginTime">
+        <text>上次登录时间:1天前</text>
+      </view> -->
+    </view>
+    <view wx:else>
+      <button wx:if="{{canIUse&&!login}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+      <view wx:else>请升级微信版本</view>
+    </view>
+    <view class="header-top-biaoqian" >
+      <text wx:if="{{userroot}}">超级管理员</text>
+      <text wx:else>普通用户</text>
+    </view>
+  </view>
+  </view>
+</view>
+
+<!-- 列表部分 -->
+<view class="centerbox">
+  <view class='option'>
+    <view class='service li' bindtap='gotoInfoPage'>
+      <view class='text'>
+        <image class='img' src='/images/d6.png'></image>
+        <text>个人信息</text>
+      </view>
+      <image class='imgs' src='/images/RightArrow.png'></image>
+    </view>
+    <view class='service li' bindtap='gotoMyrepair'>
+      <view class='text'>
+        <image class='img' src='/images/d4.png'></image>
+        <text>我的报修</text>
+      </view>
+      <image class='imgs' src='/images/RightArrow.png'></image>
+    </view>
+    
+  </view>
+
+  <view class='option'>
+    <view class='service li' bindtap='toAdmin'>
+        <view class='text'>
+          <image class='img' src='/images/admin_setting.png'></image>
+          <text>管理员核查</text>
+        </view>
+        <image class='imgs' src='/images/RightArrow.png'></image>
+    </view>
+  </view>
+
+  <view class='option'>
+    <view class='service li' bindtap='makePhone'>
+      <view class='text'>
+        <image class='img' src='/images/kf.png'></image>
+        <text>电话客服</text>
+      </view>
+      <image class='imgs' src='/images/RightArrow.png'></image>
+    </view>
+    
+    <button class="filter-btn" open-type="contact">
+      <view class='service li'>
+        <view class='text'>
+          <image class='img' src='/images/wxdl.png'></image>
+          <text class="btn-text">微信客服</text>
+        </view>
+        <image class='imgs' src='/images/RightArrow.png'></image>
+      </view>
+    </button>
+
+    <view class='service li' bindtap='gotoAboutPage'>
+      <view class='text'>
+        <image class='img' src='/images/about.png'></image>
+        <text>关于我们</text>
+      </view>
+      <image class='imgs' src='/images/RightArrow.png'></image>
+    </view>
+  </view>
+</view>
+
+<view>
+  <view class="botton" style="text-align:center;color:rgb(139, 138, 138);margin-top:20rpx">
+    <view class='pa-30 fo-30 fo-g' style='text-align: center' bindtap="autoUpdate" >当前版本：{{needUpdate}}</view>
+  </view>
+</view>

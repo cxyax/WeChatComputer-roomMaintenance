@@ -1,0 +1,54 @@
+<view class="font-text">
+  除头像昵称外可以直接修改信息
+</view>
+<form bindsubmit="formSubmit">
+<view class='bg-w' style='padding:0 30rpx'>
+  <view class='info_li' bindtap='changeAvatar'>
+    <view class='info_prefix_text'>头像</view>
+    <view class='touxiang-img'>
+      <open-data type="userAvatarUrl"></open-data>  <!--mode='aspectFill'-->
+     
+    </view>
+  </view>
+  <view class='info_li2' bindtap="callApplOpenid">
+    <view class='info_prefix_text info_left'>昵称</view>
+    <view class='info_right'>
+      <!-- <input name="nick_name" class='text-right' placeholder="请填写昵称(必填)" value='{{userNickName}}'></input> -->
+      <open-data type="userNickName" class='userInfoName'></open-data>
+    </view>
+  </view>
+  <view class='info_li2'>
+    <view class='info_prefix_text info_left'>性别</view>
+    <view class='info_right'>
+      <open-data type="userGender" lang="zh_CN" default-text="未知" class='userInfoName'></open-data>
+    </view>
+  </view>
+  <view class='info_li2'>
+    <view class='info_prefix_text info_left'>真实姓名</view>
+    <view class='info_right'>
+      <input name="realName" class='text-right' placeholder="请填写真实姓名(必填)" value='{{realName}}'></input>
+    </view>
+  </view>
+  <view class='info_li2'>
+    <view class='info_prefix_text info_left'>手机号</view>
+    <view class='info_right'>
+      <input name="realPhone" class='text-right' maxlength="11" placeholder="请填写11位手机号(必填)" value='{{realPhone}}'></input>
+    </view>
+  </view>
+  
+  <!-- <view class='info_li2' bindtap="callApplOpenid">
+    <view class='info_prefix_text info_left'>openid</view>
+    <view class='info_right'>
+      <input class='text-right' style="margin-left: -70rpx;" disabled="disabled" value='{{openid}}'></input>
+    </view>
+  </view> -->
+</view>
+
+<view class='submit_button'>
+  <button class='btns' form-type='submit'>保存修改</button>
+</view>
+</form>
+
+<!-- <view class="copyOpenid">
+  <text>复制openid</text>
+</view> -->

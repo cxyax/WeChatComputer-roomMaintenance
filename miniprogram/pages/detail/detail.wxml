@@ -1,0 +1,70 @@
+<view class="topImage">
+		<view wx:if="{{data.status == '未处理'}}">
+			<image src="/images/dingdanerror.png"></image>
+		</view>
+		<view wx:if="{{data.status == '已处理'}}">
+			<image src="/images/dingdansucces.png"></image>
+		</view>
+
+		<view class="topImageUpTitle">
+			<view wx:if="{{data.status == '未处理'}}">
+				<image src="/images/cuo.png"></image>
+				<text>工单正在处理</text>
+			</view>
+			<view wx:if="{{data.status == '已处理'}}">
+				<image src="/images/dui.png"></image>
+				<text>工单已处理完毕</text>
+			</view>
+	</view>
+</view>
+	
+<view class="orderView">
+	<view class="apply-table">
+		<view class="title-img"></view>
+		<view class='apply-title'>工单详情</view>
+		<view class="apply-item">
+			<view>
+				<text class="apply-item-title">申报机房：</text>
+				<text class="apply-item-data">{{data.floor}}号机房{{data.dorm}}号机</text>
+			</view>
+			<view>
+				<text class="apply-item-title">故障级别：</text>
+				<text class="apply-item-data">{{data.level}}</text>
+			</view>
+			<view>
+				<text class="apply-item-title">处理状态：</text>
+				<text class="apply-item-data">{{data.status}}</text>
+			</view>
+			<view>
+				<text class="apply-item-title">提交日期：</text>
+				<text class="apply-item-data">{{data.createTime}}</text>
+			</view>
+			<view>
+				<text class="apply-item-title">详细描述：</text>
+				<text class="apply-item-data">{{data.desc}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="apply-table">
+		<view class="title-img"></view>
+		<view class='apply-title'>联系人</view>
+		<view class="apply-item">
+			<view>
+				<text class="apply-item-title">姓名：</text>
+				<text class="apply-item-data">{{data.name}}</text>
+			</view>
+			<view wx:if="{{admin}}">
+				<text class="apply-item-title">联系电话：</text>
+				<text class="apply-item-data" style="color: rgb(0, 81, 255);" data-phone="{{data.phone}}" bindtap="callApplyPhone">{{data.phone}}</text>
+			</view>
+			<view wx:else>
+				<text class="apply-item-title">联系电话：</text>
+				<text class="apply-item-data" bindtap="hiring">管理员可见</text>
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{(inorderopenid == thisopenid && data.status == '未处理') || admin}}">
+		<button class="updateBtn" bindtap="updateOrder" data-id="{{data._id}}">修改工单</button>
+		<!-- <button class="deleteBtn" bindtap="deleteApplyData" data-id="{{data._id}}">删除工单</button> -->
+	</view>
+</view>

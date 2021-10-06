@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/admin/admin",
+    "pages/publish/publish",
+    "pages/updatepublish/updatepublish",
+    "pages/overlist/overlist",
+    "pages/mine/info/info",
+    "pages/mine/mine",
+    "pages/mine/about/about",
+    "pages/mine/myrepair/myrepair"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "机房报修",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#6887e1",
+    "borderStyle": "black" ,
+    "list": [{
+      "selectedIconPath": "images/t2.png",
+      "iconPath": "images/t1.png",
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+    {
+      "selectedIconPath": "images/t6.png",
+      "iconPath": "images/t5.png",
+      "pagePath": "pages/mine/mine",
+      "text": "个人中心"
+    }
+    ]
+  }
+}

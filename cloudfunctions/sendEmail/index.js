@@ -21,8 +21,8 @@ var config = {
   host: 'smtp.qq.com', //网易163邮箱 smtp.163.com
   port: 465, //网易邮箱端口 25
   auth: {
-    user: '1973245308@qq.com', //邮箱账号
-    pass: 'iaxreqxjuvhydfbg' //邮箱的授权码
+    user: '1973****08@qq.com', //邮箱账号
+    pass: 'iax*****ydfbg' //邮箱的授权码
   }
 };
 // 创建一个SMTP客户端对象
@@ -32,7 +32,7 @@ exports.main = async(event, context) => {
   // 创建一个邮件对象
   var mail = {
     // 发件人
-    from: '1973245308 <1973245308@qq.com>',
+    from: '1973****5308 <1973***08@qq.com>',
     // 主题
     subject: '[机房报修小程序来信]收到来自“'+event.shop_name+'”同学的宝贵意见/建议。',
     // 收件人
